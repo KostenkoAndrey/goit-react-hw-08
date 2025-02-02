@@ -1,0 +1,59 @@
+.headerMenu{
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 12px;
+background: black;
+border-radius: 12px;
+}
+
+.navMenu{
+display: flex;
+gap: 12px;
+}
+
+.userName{
+color: gold;
+}
+
+.navItems{
+display: block;
+font-size: 24px;
+font-weight: 700;
+padding: 12px 0;
+color: gold;
+}
+
+.navItems:hover{
+color: teal;
+}
+
+.active{
+color: teal;
+text-decoration: underline;
+}
+
+.registList{
+display: flex;
+gap: 12px;
+
+}
+
+.registItems{
+display: block;
+font-size: 16px;
+font-weight: 700;
+padding: 12px 0;
+color: gold;
+text-decoration: none;
+}
+
+.registItems:hover{
+color: teal;
+}
+
+.logoutBtn{
+font-weight: 700;
+background-color: gold;
+}
