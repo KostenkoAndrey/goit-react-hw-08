@@ -3,7 +3,7 @@ import { lazy, Suspense } from "react";
 
 import { useDispatch, useSelector } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
-import { selectorisRefreshing } from './redux/auth/selectors';
+import { selectorIsRefreshing } from './redux/auth/selectors';
 import { refreshThunk } from './redux/auth/operations';
 
 import './App.css'
@@ -21,7 +21,7 @@ const RestrictedRoute = lazy(()=> import("./components/RestrictedRoute/Restricte
 
 
 function App() {
-const isRefreshing = useSelector(selectorisRefreshing);
+const isRefreshing = useSelector(selectorIsRefreshing);
 const dispatch = useDispatch();
 useEffect(()=> {
   dispatch(refreshThunk());

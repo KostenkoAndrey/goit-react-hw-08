@@ -1,11 +1,14 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import s from './Layout.module.css';
+import clsx from "clsx";
 
 const AuthNav = () => {
+const styleHeader = ( {isActive} ) => clsx(s.registItems, isActive && s.active); 
+
   return (
    <div className={s.registList}>
-    <Link className={s.registItems} to={"/register"}>Registration</Link>
-    <Link className={s.registItems} to={'/login'}>Login</Link>
+    <NavLink className={styleHeader} to={"/register"}>Registration</NavLink>
+    <NavLink className={styleHeader} to={'/login'}>Login</NavLink>
    </div>
   )
 }

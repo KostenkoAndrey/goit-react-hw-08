@@ -1,6 +1,7 @@
-import { createSlice, createSelector } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import { fetchContacts, addContact, deleteContact } from "./operations";
 import toast from "react-hot-toast";
+import { logoutThunk } from "../auth/operations";
 
 
 export const initialState = {
@@ -57,6 +58,7 @@ const slice = createSlice({
                 state.contacts.loading = false;
                 state.contacts.error = actions.payload;
             })
+            .addCase(logoutThunk.fulfilled, () => initialState )
             },
 
 })
