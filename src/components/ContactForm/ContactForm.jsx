@@ -27,6 +27,7 @@ return (<Formik
   onSubmit={handleSubmit} 
   validationSchema={FeedbackSchema}>
     <Form className={s.form}>
+      <h3 className={s.title}>Phonebook</h3>
     <label htmlFor={nameFieldId} className={s.formLabel}>Name</label>
       <Field id={nameFieldId} type="text" name="name" className={s.formInput}/>
         <ErrorMessage name="name" component="span" className={s.errorSpan} />
