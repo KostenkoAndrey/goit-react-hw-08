@@ -9,21 +9,23 @@
     justify-content: space-between;
     padding: 12px;
     border-radius: 8px;
-    background-color: #545555;
+    background-color: rgb(65, 103, 118);
     border: 1px solid #2b323d;
     opacity: 0.95;
 
 }
 
 .formLabel{
+    text-align: left;
 color: white;
 }
 
 .formInput{
-padding: 4px;
-border-radius: 6px;
 outline: none;
 margin-bottom: 8px;
+padding: 10px;
+border-radius: 4px;
+border: 1px solid rgb(4, 108, 146);
 }
 
 .errorSpan{

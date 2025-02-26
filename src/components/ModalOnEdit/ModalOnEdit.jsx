@@ -40,7 +40,7 @@ return (<Formik
       <label htmlFor={numberFieldId} className={s.formLabel}>Number</label>
         <Field id={numberFieldId} type="text" name="number" className={s.formInput}/>
         <ErrorMessage name="number" component="span" className={s.errorSpan} />
-      <button type="submit" className={s.formBtn}>Edit</button>
+      <button type="submit" className={s.formBtn}>Save</button>
       <button type="button" onClick={onClose} className={s.formBtn}>Cancel</button>
       </Form>  
       </Formik>
