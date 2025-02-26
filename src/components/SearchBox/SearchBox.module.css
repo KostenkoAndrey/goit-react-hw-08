@@ -2,12 +2,39 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
     gap: 4px;
-    margin: 20px 0 0 20px;
+    margin: 20px auto 0;
+}
+
+.labelSpan{
+margin: auto;
 }
 
 .inputSearch {
-    width: 306px;
-    padding: 6px;
-    border-radius: 6px;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+  border: 1px solid rgb(4, 108, 146);
 }
+
+@media screen and (min-width: 768px) {
+    #root {
+      max-width: 768px;
+    }
+    .labelSearch {
+    width: 340px;
+    }
+
+  }
+  
+  @media screen and (min-width: 1280px) {
+    #root {
+      max-width: 1280px;
+    }
+
+    .labelSearch {
+        width: 600px;
+        }
+  }

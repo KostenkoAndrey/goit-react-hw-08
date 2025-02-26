@@ -28,3 +28,17 @@ export const deleteContact = createAsyncThunk("contacts/deleteContact", async ( 
     }
 });
 
+export const updateContact = createAsyncThunk("contacts/updateContact", async ( body, thunkAPI) => {
+    try {
+        const { id, name, number } = body;
+        const { data } = await authApi.patch(`/contacts/${id}`, {
+            name,
+            number });
+        
+        
+        return data;
+    } catch (e) {
+        return thunkAPI.rejectWithValue(e.message);
+    }
+});
+

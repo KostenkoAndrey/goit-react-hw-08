@@ -1,0 +1,35 @@
+.form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50% );
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #545555;
+    border: 1px solid #2b323d;
+    opacity: 0.95;
+
+}
+
+.formLabel{
+color: white;
+}
+
+.formInput{
+padding: 4px;
+border-radius: 6px;
+outline: none;
+margin-bottom: 8px;
+}
+
+.errorSpan{
+color: red;
+}
+
+.formBtn:not(:last-child){
+margin-bottom: 8px;
+}

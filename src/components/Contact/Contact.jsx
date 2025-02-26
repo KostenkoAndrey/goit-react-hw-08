@@ -5,7 +5,7 @@ import { BsFillTelephoneFill as Phone } from "react-icons/bs";
 
 
 
-const Contact = ({ id, name, number, openModal }) => {
+const Contact = ({ id, name, number, openModal, onOpenEdit }) => {
 
 return (
 <div className={s.wrapper}>
@@ -19,7 +19,10 @@ return (
         <p className={s.innerText}>{number}</p>
     </div>
     </div>
-    <button  onClick={() => openModal(id)} className={s.contantNBtn}>Delete</button>
+   <div className={s.btnContainer}>
+   <button  onClick={() => openModal(id)} className={s.contantNBtn}>Delete</button>
+   <button  onClick={() => onOpenEdit(id)} className={s.contantNBtn}>Edit</button>
+   </div>
     </div>)}
 
 export default Contact;

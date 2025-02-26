@@ -1,8 +1,11 @@
+import s from "./HomePage.module.css"
+
+
 const HomePage = () => {
   return (
-    <div>
-      <h2>HomePage</h2>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae praesentium corrupti adipisci quod, in veniam illum quis eum deserunt perferendis, mollitia consectetur assumenda laborum beatae sequi officiis distinctio veritatis accusantium inventore officia aperiam magnam aspernatur. Repudiandae, blanditiis voluptatibus! Nihil tenetur eum obcaecati eaque ut, iure officiis adipisci fugiat reprehenderit, eveniet praesentium fuga vero quas. Iste aliquam illum assumenda est. Et, praesentium possimus voluptas, maiores non voluptatum dolore obcaecati quibusdam velit veniam dignissimos eaque beatae molestias id rerum corrupti dicta odit fuga libero neque ad eos quidem distinctio! Incidunt repudiandae, unde nihil corrupti quidem deserunt consectetur veniam, fugiat voluptates maiores dolore beatae adipisci. Maiores modi quasi repellendus qui, quod libero iure corporis in vel numquam, nisi veritatis inventore, quos excepturi assumenda incidunt ad ab aut quisquam. Corrupti ab similique impedit consectetur optio illum quibusdam odio veniam provident, labore, ducimus amet molestiae suscipit voluptatem, obcaecati ipsa quasi? Iusto corporis, possimus ipsum error quibusdam rem perspiciatis! Itaque, quas! Adipisci laboriosam saepe aperiam perspiciatis dolor, ut nulla debitis quisquam odio reiciendis neque est atque fuga odit ipsa accusamus consectetur quibusdam nesciunt velit, pariatur enim? Amet asperiores illo deleniti doloribus sit enim repellat dolorum? Quia incidunt nobis rem nostrum nulla qui illo nisi iusto repudiandae consequatur accusantium eveniet facere, error est, sed repellendus autem molestiae quaerat nesciunt fuga ea. Quibusdam explicabo atque tempora nihil minima repellat at, obcaecati, vel eligendi autem ratione porro delectus accusamus quidem! Dolorum recusandae natus quod aliquid eos dicta, omnis facere, iste amet vero voluptates provident laboriosam perferendis molestias fuga tenetur libero? Facilis, doloribus maxime dolor nemo ipsam magnam velit excepturi nisi illum, aspernatur tempora nihil ad eius quis vitae veniam enim quisquam perferendis explicabo molestias quaerat doloremque reprehenderit fugiat. Nostrum deserunt sit reiciendis itaque delectus quam debitis, aut placeat illo cum autem! Accusantium numquam, aliquam omnis facere hic odit voluptate.</p>
+    <div className={s.homeContainer}>
+     <h2 className={s.homeTitle}>Welcome to PhoneBook</h2>
+     <p className={s.text}>Keep your contacts organized and accessible anytime, anywhere.</p>
     </div>
   )
 }

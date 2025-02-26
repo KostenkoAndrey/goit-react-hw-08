@@ -4,25 +4,26 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 padding: 0 12px;
-background: black;
-border-radius: 12px;
+background-color: rgb(140, 175, 208);
 }
 
 .navMenu{
 display: flex;
-gap: 12px;
+gap: 6px;
 }
 
-.userName{
-color: gold;
+.userName {
+color: black;
+font-size: 12px;
+font-weight: 700;
 }
 
 .navItems{
 display: block;
-font-size: 24px;
+font-size: 12px;
 font-weight: 700;
 padding: 12px 0;
-color: gold;
+color: black;
 }
 
 .navItems:hover{
@@ -53,7 +54,60 @@ text-decoration: none;
 color: teal;
 }
 
-.logoutBtn{
+.logoutBtn {
+font-size: 12px;
+padding: 8px;
 font-weight: 700;
-background-color: gold;
+background-color: white;
 }
+
+.logoutBtn:hover,
+.logoutBtn:focus {
+    box-shadow: 2px 2px 2px 2px rgb(136, 199, 226);
+    transform: scale(0.95);
+    background-color: rgb(100, 137, 172);
+}
+
+.logoutBtn:active {
+    box-shadow: 1px 1px 1px 1px rgb(114, 184, 213); 
+    outline: black; 
+}
+
+@media screen and (min-width: 768px) {
+    #root {
+      max-width: 768px;
+    }
+
+    .navItems{
+        font-size: 16px;
+        }
+
+    .userName{
+        font-size:16px;
+        }
+
+    .logoutBtn {
+        font-size: 16px;
+        padding: 8px;
+        background-color:  rgb(140, 175, 208);
+        }
+  }
+  
+  @media screen and (min-width: 1280px) {
+    #root {
+      max-width: 1280px;
+    }
+
+    .navItems{
+        font-size: 24px;
+        }
+
+    .userName{
+        font-size: 24px;
+        }
+
+    .logoutBtn {
+        font-size: 24px;
+        padding: 12px;
+        }
+  }

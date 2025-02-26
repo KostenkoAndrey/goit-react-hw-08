@@ -6,14 +6,14 @@ import Contact from "../Contact/Contact";
 
 
 
-const ContactList = ({ openModal }) => {    
+const ContactList = ({ openModal, onOpenEdit }) => {    
 const contacts = useSelector(selectFilteredContacts);
     
 return (
     <ul className={s.contactsList}>
         {contacts.map(({ id, name, number }) =>
         <li  key={id} className={s.contactItem} >
-            <Contact openModal={openModal} id={id} name={name} number={number}/>
+            <Contact openModal={openModal} id={id} name={name} number={number} onOpenEdit={onOpenEdit}/>
             </li>)}
     </ul>
 )

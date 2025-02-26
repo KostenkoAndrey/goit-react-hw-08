@@ -2,21 +2,26 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 20px;
+    margin-top: 20px;
 }
 
 .contactItem{
-width: 295px;
+width: 100%;
 }
 
 .wrapper{
     display: flex;
     justify-content: space-between;
-    padding: 16px;
-    border: 2px solid black;
+    padding: 12px;
+    border: 1px solid rgb(4, 108, 146);
     border-radius: 8px;
 }
 
+.outercontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .innerCont{
     display: flex;
     gap: 4px;
@@ -24,12 +29,68 @@ width: 295px;
     align-items: center;
 }
 
-.contantNBtn{
-    display: block;
-    background-color: rgb(244, 242, 242);
-    border: 1px solid rgb(108, 107, 107);
-    border-radius: 8px;
+.innerCont p {
+    font-size: 8px;
 }
+
+.btnContainer{
+    display: flex;
+    gap: 4px;
+}
+
+.contantNBtn{
+    background-color:rgb(190, 229, 245);
+    border: 1px solid rgb(4, 108, 146);
+    border-radius: 8px;
+    outline: none;
+    box-shadow: 1px 1px 2px 2px rgb(190, 229, 245);
+    transition: transform 0.3s ease-in-out;
+}
+
+.contantNBtn:hover,
+.contantNBtn:focus {
+    box-shadow: 2px 2px rgb(114, 184, 213);
+    transform: scale(0.95);
+}
+
+.contantNBtn:active {
+    box-shadow: 0 2px 4px rgb(114, 184, 213); 
+    outline: black; 
+}
+
 .contactIcon{
     width: 20px;
 }
+
+@media screen and (min-width: 768px) {
+    #root {
+      max-width: 768px;
+    }
+
+    .contactsList{
+        padding: 0 202px;
+    }
+
+    .innerCont p {
+        font-size: 12px;
+    }
+
+    .btnContainer{
+        gap: 8px;
+    }
+  }
+  
+  @media screen and (min-width: 1280px) {
+    #root {
+      max-width: 1280px;
+    }
+
+    .contactsList{
+        padding: 0 300px;
+        gap: 10px;
+    }
+
+    .contactItem{
+        flex-basis: calc((100% - 10px) / 2);
+        }
+  }

@@ -36,8 +36,7 @@ border-radius: 6px;
 
 .formBtn{
 outline: none;
-background-color:aquamarine;
-border: none;
+background-color: rgb(114, 184, 213);
 box-shadow: 1px 1px 2px 2px rgb(174, 172, 172);
 transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
 }
@@ -45,9 +44,10 @@ transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
 .formBtn:hover,
 .formBtn:focus {
 outline: none;
-background-color: rgb(16, 255, 139); 
+background-color: rgb(114, 184, 213); 
 box-shadow: 2px 2px  rgba(0, 0, 0, 0.2);
 }
+
 .formBtn:active{
 transform: scale(0.95);
 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);

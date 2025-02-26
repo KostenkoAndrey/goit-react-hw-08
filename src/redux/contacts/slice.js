@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchContacts, addContact, deleteContact } from "./operations";
+import { fetchContacts, addContact, deleteContact, updateContact } from "./operations";
 import toast from "react-hot-toast";
 import { logoutThunk } from "../auth/operations";
 
@@ -8,7 +8,7 @@ export const initialState = {
     contacts:{
         items: [],
         loading: false,
-        error: null,
+        error: null
     },
 };
 
@@ -57,6 +57,22 @@ const slice = createSlice({
             .addCase(deleteContact.rejected, ( state, actions ) =>{
                 state.contacts.loading = false;
                 state.contacts.error = actions.payload;
+            })
+            .addCase(updateContact.pending, state => {
+                state.contacts.loading = true;
+            })
+            .addCase(updateContact.fulfilled, (state, action) => {
+                state.contacts.loading = false;
+                state.contacts.error = null;
+                state.contacts.items = state.contacts.items.map(contact =>
+                contact.id === action.payload.id ? action.payload : contact);
+                toast.success("Contact updated successfully");
+            })
+            .addCase(updateContact.rejected, (state, action) => {
+                console.error("Error in updateContact:", action.payload); 
+                state.contacts.loading = false;
+                state.contacts.error = action.payload;
+                toast.error("Failed to update contact");
             })
             .addCase(logoutThunk.fulfilled, () => initialState )
             },
