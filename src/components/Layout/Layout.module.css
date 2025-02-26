@@ -58,7 +58,7 @@ color: teal;
 font-size: 12px;
 padding: 8px;
 font-weight: 700;
-background-color: white;
+background-color:  rgb(140, 175, 208);
 }
 
 .logoutBtn:hover,
@@ -89,7 +89,6 @@ background-color: white;
     .logoutBtn {
         font-size: 16px;
         padding: 8px;
-        background-color:  rgb(140, 175, 208);
         }
   }
   
