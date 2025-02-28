@@ -3,7 +3,7 @@
     top: 50%;
     left: 50%;
     transform: translate( -50%, -50% );
-    width: 400px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -16,7 +16,7 @@
 }
 
 .formLabel{
-    text-align: left;
+text-align: left;
 color: white;
 }
 
@@ -31,7 +31,10 @@ border: 1px solid rgb(4, 108, 146);
 .errorSpan{
 color: red;
 }
-
+.formBtn{
+    color: black;
+    font-weight: 500;
+}
 .formBtn:not(:last-child){
 margin-bottom: 8px;
 }
