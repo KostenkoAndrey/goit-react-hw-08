@@ -69,7 +69,6 @@ const slice = createSlice({
                 toast.success("Contact updated successfully");
             })
             .addCase(updateContact.rejected, (state, action) => {
-                console.error("Error in updateContact:", action.payload); 
                 state.contacts.loading = false;
                 state.contacts.error = action.payload;
                 toast.error("Failed to update contact");
